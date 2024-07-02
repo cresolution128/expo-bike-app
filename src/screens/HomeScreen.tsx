@@ -14,16 +14,18 @@ type Props = {
 const HomeScreen: React.FC<Props> = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() =>
-          navigation.navigate('Details', {
-            itemId: 86,
-            otherParam: 'anything you want here',
-          })
-        }
-      />
+      <View>
+        <Text style={styles.title}>Home Screen</Text>
+        <Button
+          title="Go to Details"
+          onPress={() =>
+            navigation.navigate('Details', {
+              itemId: 86,
+              otherParam: 'anything you want here',
+            })
+          }
+        />
+      </View>
     </View>
   );
 };
@@ -31,6 +33,7 @@ const HomeScreen: React.FC<Props> = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection:'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
