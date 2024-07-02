@@ -14,6 +14,7 @@ const AppNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Details" component={Stepper} />
     </Stack.Navigator>
   );
 };
