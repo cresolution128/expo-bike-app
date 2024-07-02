@@ -15,14 +15,11 @@ const HomeScreen: React.FC<Props> = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>Home Screen</Text>
+        <Text style={styles.title}>Go to Stepper</Text>
         <Button
-          title="Go to Details"
+          title="Go to Stepper"
           onPress={() =>
-            navigation.navigate('Details', {
-              itemId: 86,
-              otherParam: 'anything you want here',
-            })
+            navigation.navigate('Stepper')
           }
         />
       </View>

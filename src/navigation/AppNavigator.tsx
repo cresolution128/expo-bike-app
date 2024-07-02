@@ -5,16 +5,16 @@ import Stepper from '../components/Stepper';
 
 export type RootStackParamList = {
   Home: undefined;
-  Details: {itemId: number; otherParam: string};
+  Stepper: undefined
 };
 
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator();
 
 const AppNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Details" component={Stepper} />
+      <Stack.Screen name="Stepper" component={Stepper} />
     </Stack.Navigator>
   );
 };
