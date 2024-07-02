@@ -1,11 +1,11 @@
 import React from "react";;
 import { StyleSheet, Text, View } from "react-native";
 
-const PickingDateStepComponent: React.FC = () => {
+const PickingLevelStepComponent: React.FC = () => {
   return (
     <View style={style.container}>
       <Text style={style.content}>
-        DATE SELECTING - 1
+        LEVEL SELECTING - 3
       </Text>
     </View>
   )
@@ -22,4 +22,4 @@ const style = StyleSheet.create({
   }
 })
 
-export default PickingDateStepComponent;
+export default PickingLevelStepComponent;
