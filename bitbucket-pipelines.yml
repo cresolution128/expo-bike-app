@@ -17,4 +17,3 @@ pipelines:
           - expo login --non-interactive -u $EXPO_USERNAME -p $EXPO_PASSWORD
 
         deployment: production
-        trigger: manual
