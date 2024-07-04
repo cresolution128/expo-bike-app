@@ -11,21 +11,16 @@ type Props = {
   navigation: HomeScreenNavigationProp;
 };
 
-const HomeScreen: React.FC<Props> = ({navigation}) => {
-  return (
-    <View style={styles.container}>
-      <View>
-        <Text style={styles.title}>Go to Stepper-----------</Text>
-        <Button
-          title="Go to Stepper"
-          onPress={() =>
-            navigation.navigate('Stepper')
-          }
-        />
-      </View>
+const HomeScreen: React.FC<Props> = ({navigation}) => (
+  <View style={styles.container}>
+    <View>
+      <Text style={styles.title}>Go to Stepper-----------</Text>
+      <Button
+        title="Go to Stepper"
+        onPress={() => navigation.navigate('Stepper')} />
     </View>
-  );
-};
+  </View>
+);
 
 const styles = StyleSheet.create({
   container: {

@@ -85,7 +85,8 @@ web-build/
 # Node artifact files
 node_modules/
 dist/
-
+android
+ios
 # Compiled Java class files
 *.class
 
