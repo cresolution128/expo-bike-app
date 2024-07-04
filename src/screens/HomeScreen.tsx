@@ -15,7 +15,7 @@ const HomeScreen: React.FC<Props> = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>Go to Stepper</Text>
+        <Text style={styles.title}>Go to Stepper-----------</Text>
         <Button
           title="Go to Stepper"
           onPress={() =>
