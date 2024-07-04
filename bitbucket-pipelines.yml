@@ -13,7 +13,7 @@ pipelines:
     - step:
         name: EAS Update
         script:
-          - eas update --branch $BITBUCKET_BRANCH --message "Automatic update from Bitbucket Pipelines on branch $BITBUCKET_BRANCH"
+          - eas update --branch $BITBUCKET_BRANCH --message "Automatic   update from Bitbucket Pipelines on branch $BITBUCKET_BRANCH"
           - expo login --non-interactive -u $EXPO_USERNAME -p $EXPO_PASSWORD
 
         deployment: production
