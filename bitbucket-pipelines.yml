@@ -1,4 +1,4 @@
-image: node:16  # Choose the appropriate Node.js version
+image: node:20
 
 pipelines:
   default:
@@ -7,13 +7,15 @@ pipelines:
         caches:
           - node
         script:
-          - npm install
-          - npm install -g eas-cli  # Install Expo CLI globally if not already installed
-
-    - step:
-        name: EAS Update
-        script:
-          - eas update --branch $BITBUCKET_BRANCH --message "Automatic   update from Bitbucket Pipelines on branch $BITBUCKET_BRANCH"
+          - npm install -g expo-cli eas-cli  # Install Expo CLI and EAS CLI globally
+          - export PATH=/usr/local/bin:$PATH  # Explicitly add /usr/local/bin to PATH
+          - echo $PATH  # Print PATH for debugging
+          - ls -l /usr/local/bin  # List contents of /usr/local/bin for debugging
+          - which expo  # Check if expo-cli is available
+          - expo --version  # Check the version of expo-cli
+          - which eas  # Check if eas-cli is available
+          - eas --version  # Check the version of eas-cli
           - expo login --non-interactive -u $EXPO_USERNAME -p $EXPO_PASSWORD
+          - eas update --branch $BITBUCKET_BRANCH --message "$BITBUCKET_COMMIT"
 
         deployment: production
