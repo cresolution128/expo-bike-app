@@ -23,6 +23,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2de3fa0a-83a4-43fe-be49-3295d46320f3"
+      }
+    },
+    "owner": "kvasar",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/2de3fa0a-83a4-43fe-be49-3295d46320f3"
     }
   }
 }
