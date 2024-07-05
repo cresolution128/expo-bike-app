@@ -1,0 +1,21 @@
+image: node:20
+
+pipelines:
+  default:
+    - step:
+        name: Install Dependencies
+        caches:
+          - node
+        script:
+          - npm install -g expo-cli eas-cli  # Install Expo CLI and EAS CLI globally
+          - export PATH=/usr/local/bin:$PATH  # Explicitly add /usr/local/bin to PATH
+          - echo $PATH  # Print PATH for debugging
+          - ls -l /usr/local/bin  # List contents of /usr/local/bin for debugging
+          - which expo  # Check if expo-cli is available
+          - expo --version  # Check the version of expo-cli
+          - which eas  # Check if eas-cli is available
+          - eas --version  # Check the version of eas-cli
+          - expo login --non-interactive -u $EXPO_USERNAME -p $EXPO_PASSWORD
+          - eas update --branch $BITBUCKET_BRANCH --message "$BITBUCKET_COMMIT"
+
+        deployment: production
